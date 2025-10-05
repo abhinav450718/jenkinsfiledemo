@@ -1,4 +1,5 @@
-@Library('jenkinsclass@main') _
+@Library('jenkins@main') _
+import org.opstree.Utils
 
 pipeline {
     agent any
@@ -13,7 +14,9 @@ pipeline {
         stage('Shared Library Execution') {
             steps {
                 script {
-                    sayHello('ABHINAV')
+                    sayHello('Abhinav')   // from vars/sayHello.groovy
+                    def utils = new Utils(this)
+                    utils.runSampleMethod('Abhinav123') // from src/org/opstree/Utils.groovy
                 }
             }
         }
