@@ -11,8 +11,14 @@ pipeline {
         stage('Shared Library Execution') {
             steps {
                 script {
-                    sayHello('Abhinav Sikarwar')
+                    sayHello('ABHINAV')
                 }
+            }
+        }
+
+        stage('Completion') {
+            steps {
+                echo "Shared library functions executed successfully!"
             }
         }
     }
