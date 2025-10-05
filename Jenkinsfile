@@ -1,4 +1,4 @@
-@Library('jenkins@main') _
+@Library('jenkinsclass@main') _
 import org.opstree.Utils
 
 pipeline {
